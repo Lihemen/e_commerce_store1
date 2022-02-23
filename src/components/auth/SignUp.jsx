@@ -32,7 +32,7 @@ const SignUp = () => {
                 id="floatingFirstname"
                 placeholder="Firstname"
               />
-              <label for="floatingFirstname">Firstname</label>
+              <label htmlFor="floatingFirstname">Firstname</label>
             </div>
             <div className="form-floating mb-3">
               <input
@@ -41,7 +41,7 @@ const SignUp = () => {
                 id="floatingLastname"
                 placeholder="Lastname"
               />
-              <label for="floatingLastname">Lastname</label>
+              <label htmlFor="floatingLastname">Lastname</label>
             </div>
             <div className="form-floating mb-3">
               <input
@@ -50,7 +50,7 @@ const SignUp = () => {
                 id="floatingInput"
                 placeholder="name@example.com"
               />
-              <label for="floatingInput">Email address</label>
+              <label htmlFor="floatingInput">Email address</label>
             </div>
             <div className="form-floating">
               <input
@@ -59,7 +59,7 @@ const SignUp = () => {
                 id="floatingPassword"
                 placeholder="Password"
               />
-              <label for="floatingPassword">Password</label>
+              <label htmlFor="floatingPassword">Password</label>
             </div>
           </div>
           <div className="modal-footer">
