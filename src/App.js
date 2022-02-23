@@ -4,9 +4,8 @@ import Home from "./components/Home";
 import Products from "./components/Products";
 import Product from "./components/Product";
 import NotFound from "./components/NotFound";
-import Login from "./components/auth/Login";
-import SignUp from "./components/auth/SignUp";
 import Cart from "./components/Cart";
+import Checkout from "./components/Checkout";
 import About from "./components/About";
 import Contact from "./components/Contact";
 
@@ -20,11 +19,10 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="products" element={<Products />} />
         <Route path="products/:productId" element={<Product />} />
-        <Route path="login" element={<Login />} />
-        <Route path="signup" element={<SignUp />} />
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contact />} />
         <Route path="cart" element={<Cart />} />
+        <Route path="checkout" element={<Checkout />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>

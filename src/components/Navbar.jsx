@@ -1,6 +1,8 @@
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import LoginButton from "./buttons/LoginButton";
+import SignupButton from "./buttons/SignupButton";
 
 const Navbar = () => {
   const state = useSelector((state) => state.handle_cart);
@@ -45,16 +47,8 @@ const Navbar = () => {
             </li>
           </ul>
           <div className="buttons">
-            <Link href="" className="btn btn-outline-dark" to="/auth/login">
-              <i className="fa fa-sign-in me-1"></i> Login
-            </Link>
-            <Link
-              href=""
-              className="btn btn-outline-dark ms-2"
-              to="/auth/signup"
-            >
-              <i className="fa fa-user-plus me-1"></i> Sign up
-            </Link>
+            <LoginButton />
+            <SignupButton />
             <Link href="" className="btn btn-outline-dark ms-2" to="/cart">
               <i className="fa fa-shopping-cart"></i> Cart (
               {state ? state.length : 0})
