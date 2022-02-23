@@ -2,6 +2,8 @@ const constants = {
   ADD_TO_CART: "ADD_TO_CART",
   REMOVE_FROM_CART: "REMOVE_FROM_CART",
   CLEAR_CART: "CLEAR_CART",
+  ADD_QUANTITY: "ADD_QUANTITY",
+  SUBTRACT_QUANTITY: "SUBTRACT_QUANTITY",
 };
 
 export default constants;

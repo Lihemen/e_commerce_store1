@@ -1,6 +1,9 @@
 import React from "react";
 
 const Contact = () => {
+  function handle_submit(e) {
+    e.preventDefault();
+  }
   return (
     <>
       <div className="container-fluid">
@@ -13,7 +16,7 @@ const Contact = () => {
               <img
                 src="/assets/contact.jpg"
                 class="card-img"
-                alt="Contact Image"
+                alt="Contact Us"
                 height="200px"
               />
             </div>
@@ -54,7 +57,13 @@ const Contact = () => {
                 ></textarea>
                 <label for="floatingTextarea2">Message Here</label>
               </div>
-              <button className="btn btn-outline-dark ">SEND</button>
+              <button
+                className="btn btn-outline-dark  w-50 mx-auto"
+                type="submit"
+                onClick={handle_submit}
+              >
+                SEND
+              </button>
             </form>
           </div>
         </div>

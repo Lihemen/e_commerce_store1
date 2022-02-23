@@ -2,7 +2,11 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { NavLink } from "react-router-dom";
 
-import { add_to_cart, remove_from_cart, clear_cart } from "../redux/action";
+import {
+  add_quantity,
+  subtract_quantity,
+  remove_from_cart,
+} from "../redux/action";
 
 const Cart = () => {
   const state = useSelector((state) => state.handle_cart);
@@ -11,6 +15,15 @@ const Cart = () => {
   const handle_close = (item) => {
     dispatch(remove_from_cart(item));
   };
+
+  const handle_add = (item) => {
+    dispatch(add_quantity(item));
+  };
+
+  const handle_subtract = (item) => {
+    dispatch(subtract_quantity(item));
+  };
+
   const cart_items = (item) => {
     return (
       <div className="px-4 my-5 bg-light rounded-3" key={item.id}>
@@ -31,7 +44,24 @@ const Cart = () => {
             </div>
             <div className="col-md-4">
               <h3>{item.title}</h3>
-              <p className="lead fw-bold">${item.price} </p>
+              <div className="d-flex justify-content-between">
+                <p className="lead fw-bold">${item.price} </p>
+                <p className="lead fw-bold">({item.quantity}) </p>
+              </div>
+              <div className="buttons">
+                <button
+                  className="btn btn-outline-dark px-2"
+                  onClick={() => handle_add(item)}
+                >
+                  <i className="fa fa-plus p-0"></i>
+                </button>
+                <button
+                  className="btn btn-outline-dark mx-3 px-2"
+                  onClick={() => handle_subtract(item)}
+                >
+                  <i className="fa fa-minus p-0"></i>
+                </button>
+              </div>
             </div>
           </div>
         </div>

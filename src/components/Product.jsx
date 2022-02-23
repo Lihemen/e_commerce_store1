@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import { add_to_cart, remove_from_cart, clear_cart } from "../redux/action";
+import { add_to_cart } from "../redux/action";
 import { Link, useParams } from "react-router-dom";
 import Skeleton from "react-loading-skeleton";
 
@@ -13,10 +13,6 @@ const Product = () => {
 
   const add_product = (product) => {
     dispatch(add_to_cart(product));
-  };
-
-  const remove_product = (product) => {
-    dispatch(remove_from_cart(product));
   };
 
   useEffect(() => {
@@ -34,7 +30,7 @@ const Product = () => {
     };
 
     getProduct();
-  }, []);
+  }, [productId]);
 
   const Loading = () => {
     return (
